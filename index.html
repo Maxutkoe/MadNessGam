@@ -9,29 +9,9 @@
     <canvas id="unity-canvas" width=1000 height=600 tabindex="-1" style="width: 90%; height: 90%; background: #CCCCCC"></canvas>
     <script src="Build/MAD.loader.js"></script>
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
-    <style>
-    @media (orientation: portrait) {
-      body {
-        transform: rotate(0deg);
-      }
-    }
-
-    @media (orientation: landscape) {
-      body {
-        transform: rotate(90deg); 
-        transform-origin: top left; 
-        width: 100vh; 
-        height: 100vw;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
-    </style>
     <script>
       let tg = window.Telegram.WebApp;
       tg.requestFullscreen();
-      tg.lockOrientation("landscape");
     </script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
